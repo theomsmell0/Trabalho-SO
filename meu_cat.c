@@ -7,7 +7,7 @@ int main()
 	int ru;
 	int bytes;
 	
-	ru = open(arquivo , O_RDONLY);
+	ru = open(arquivo , 0);
 	bytes = read(ru, buff , 1024);
 	if (bytes > 0){
 		write(1,buff,bytes);}
