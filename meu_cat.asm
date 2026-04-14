@@ -13,7 +13,7 @@ main:
     ; open(arquivo, O_RDONLY)
     mov rax, 2
     mov rdi, arquivo
-    mov rsi, O_RDONLY
+    mov rsi, 0
     syscall
     mov [ru], eax
     
