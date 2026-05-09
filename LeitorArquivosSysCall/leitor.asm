@@ -7,9 +7,9 @@ section .bss
     bytes resd 1
 
 section .text
-    global main
+    global _start
 
-main:
+_start:
     ; open(arquivo, O_RDONLY)
     mov rax, 2
     mov rdi, arquivo
@@ -42,5 +42,7 @@ fim:
     mov rax, 3
     syscall
     
-    xor eax, eax
-    ret
+    ; exit(0)
+    mov rax, 60
+    xor rdi, rdi
+    syscall
