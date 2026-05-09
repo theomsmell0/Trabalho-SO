@@ -2,7 +2,7 @@
 #include <unistd.h>
 int main()
 {
-	char *arquivo = "teste.txt";
+	char *arquivo = "LeitorArquivosSysCall/texto.txt";
 	char buff[1024];
 	int ru;
 	int bytes;

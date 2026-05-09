@@ -1,1 +1,2 @@
-Sistemas Operacionais!
+System calls são serviços fornecidos pelo sistema operacional que permitem que programas de usuário acessem recursos protegidos como arquivos, memória e dispositivos de hardware específicos. Atuam como intermediárias entre aplicações em modo usuário e o kernel, garantindo segurança, isolamento e proteção de recursos. Exemplos: open, read, write, close, fork, exec.
+
