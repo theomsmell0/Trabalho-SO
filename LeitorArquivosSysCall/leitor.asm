@@ -1,5 +1,5 @@
 section .data
-    arquivo db "teste.txt", 0
+    arquivo db "LeitorArquivosSysCall/texto.txt", 0
 
 section .bss
     buff resb 1024
