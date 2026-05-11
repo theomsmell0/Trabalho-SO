@@ -2,19 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdbool.h>
-
-//  função de espera nova
 int waitingtime(int proc[], int n, int burst_time[], int wait_time[], int time_slice) {
     int remaining_time[n];
-    
-    // Copia os tempos totais para o vetor de tempos restantes
+       
     for (int i = 0; i < n; i++) {
         remaining_time[i] = burst_time[i];
     }
-    
     int tempo_global = 0; 
-
-    // laço simulando o processador fatiando o tempo
     while (1) {
         bool todos_terminaram = true;
 
@@ -39,26 +33,19 @@ int waitingtime(int proc[], int n, int burst_time[], int wait_time[], int time_s
     }
     return 0;
 }
-
-//  função de turnaround
 int turnaroundtime(int proc[], int n, int burst_time[], int wait_time[], int tat[]) {
    for (int i = 0; i < n ; i++) {
        tat[i] = burst_time[i] + wait_time[i];
    }
    return 0;
 }
-
-// timeslice aqui
 int avgtime(int proc[], int n, int burst_time[], int time_slice) {
    int wait_time[n], tat[n], total_wt = 0, total_tat = 0;
    
-   // chama a nova função de espera passando o time_slice (2)
    waitingtime(proc, n, burst_time, wait_time, time_slice);
    
-   // chama a função de turnaround inalterada
    turnaroundtime(proc, n, burst_time, wait_time, tat);
    
-
    printf("Processes  Burst   Waiting Turn around \n");
    for (int i=0; i<n; i++) {
       total_wt = total_wt + wait_time[i];
@@ -69,8 +56,6 @@ int avgtime(int proc[], int n, int burst_time[], int time_slice) {
    printf("Average turn around time = %f\n", (float)total_tat / (float)n);
    return 0;
 }
-
-//  MAIN de 30 processos
 int main() {
    int n = 30;
    int proc[30];
@@ -79,17 +64,12 @@ int main() {
    
    srand(time(NULL));
 
-   
    for (int i = 0; i < n; i++) {
        proc[i] = i + 1; 
        burst_time[i] = tempos_opcoes[rand() % 3]; 
    }
 
-   
    int time_slice = 2; 
-   
-   // Chama a função central
    avgtime(proc, n, burst_time, time_slice);
-
    return 0;
 }
