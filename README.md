@@ -33,13 +33,13 @@ Os projetos estão organizados em três categorias principais:
 │   ├── ScriptC/
 │   │   ├── barbeirodorminhoco.c
 │   │   ├── leitorescritor.c
-│   │   └── ...
+│   │  
 │   ├── ScriptPython/
-│   │   ├── jantardosfilosofos.py
-│   │   ├── produtoconsumidor.py
-│   │   └── ...
-│   └── README.md
-└── README.md (Este arquivo)
+│       ├── jantardosfilosofos.py
+│       ├── produtoconsumidor.py
+│      
+│   
+└── README.md
 ```
 ## Referências Bibliográficas
 
