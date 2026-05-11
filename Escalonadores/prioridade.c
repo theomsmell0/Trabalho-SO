@@ -4,7 +4,6 @@
 #include <stdbool.h>
 #include <limits.h>
 
-
 int waitingtime(int proc[], int n, int burst_time[], int wait_time[], int arrival_time[]) {
     int rt[n];
     
@@ -15,8 +14,6 @@ int waitingtime(int proc[], int n, int burst_time[], int wait_time[], int arriva
     int complete = 0, t = 0, minm = INT_MAX;
     int shortest = 0, finish_time;
     bool check = false;
-
-   
     while (complete != n) {
       
         for (int j = 0; j < n; j++) {
@@ -26,27 +23,19 @@ int waitingtime(int proc[], int n, int burst_time[], int wait_time[], int arriva
                 check = true;
             }
         }
-
-       
         if (check == false) {
             t++;
             continue;
         }
-
-      
         rt[shortest]--;
         minm = rt[shortest];
         
         if (minm == 0)
             minm = INT_MAX;
-
-        
         if (rt[shortest] == 0) {
             complete++;
             check = false;
             finish_time = t + 1;
-            
-          
             wait_time[shortest] = finish_time - burst_time[shortest] - arrival_time[shortest];
             
             if (wait_time[shortest] < 0)
@@ -78,7 +67,6 @@ int avgtime(int proc[], int n, int burst_time[], int arrival_time[]) {
     printf("Tempo medio de turnaround = %f\n", (float)total_tat / (float)n);
     return 0;
 }
-
 int main() {
    
     srand(time(NULL));
