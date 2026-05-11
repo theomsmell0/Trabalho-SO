@@ -4,13 +4,13 @@ int main()
 {
 	char *arquivo = "LeitorArquivosSysCall/texto.txt";
 	char buff[1024];
-	int ru;
+	int fd;
 	int bytes;
 	
-	ru = open(arquivo , 0);
-	bytes = read(ru, buff , 1024);
+	fd = open(arquivo , 0);
+	bytes = read(fd, buff , 1024);
 	if (bytes > 0){
 		write(1,buff,bytes);}
-	close(ru);
+	close(fd);
 	return 0;
 }

@@ -3,7 +3,7 @@ section .data
 
 section .bss
     buff resb 1024
-    ru resd 1
+    fd resd 1
     bytes resd 1
 
 section .text
@@ -15,10 +15,10 @@ _start:
     mov rdi, arquivo
     mov rsi, 0
     syscall
-    mov [ru], eax
+    mov [fd], eax
     
-    ; read(ru, buff, 1024)
-    mov edi, [ru]
+    ; read(fd, buff, 1024)
+    mov edi, [fd]
     mov rsi, buff
     mov rdx, 1024
     mov rax, 0
@@ -37,8 +37,8 @@ _start:
     syscall
     
 fim:
-    ; close(ru)
-    mov edi, [ru]
+    ; close(fd)
+    mov edi, [fd]
     mov rax, 3
     syscall
     

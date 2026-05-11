@@ -5,11 +5,11 @@ Usar, pelo menos, 3 chamadas de sistema
 
 Relatório com
 
-* [ ] Objetivo
-* [ ] Programa explicado
-* [ ] Cópias das telas do emulador mostrando o
-* [ ] programa rodando.
-* [ ] código
+* [X] Objetivo
+* [X] Programa explicado
+* [X] Cópias das telas do emulador mostrando o
+* [X] programa rodando.
+* [X] código
 
 Apresentação com powerpoint e telas da saída do
 emulador.
@@ -17,8 +17,8 @@ emulador.
 # Trabalho 2
 
 * [ ] Baixar o código sched-fcfs.c
-* [ ] Implementar escalonador SJF
-* [ ] Implementar escalonador SRTF
+* [ ] Implementar escalonador SJF (cauã)
+* [ ] Implementar escalonador SRTF (cauã)
 * [ ] Implementar escalonador Prioridades (fixa)
 * [ ] Implementar escalonador Round Robin (dar o time-slice como entrada)
 * [ ] Ajustar código para criar 30 processos com tempos aleatórios entre 5, 8 e 12
@@ -39,9 +39,9 @@ emulador.
 
 # Trabalho 3
 
-• Produtor x Consumidor
+• Produtor x Consumidor (cauã)
 • Leitor x Escritor
-• O jantar dos filósofos
+• O jantar dos filósofos (cauã)
 • O Problema do Barbeiro Dorminhoco
 
 Relatório
